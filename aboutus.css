@@ -1,148 +1,190 @@
-/* ===== HERO ===== */
+/* ===== PAGE SPACING (IMPORTANT) ===== */
+body{
+    margin:0;
+    padding-top:80px; /* prevents nav overlap */
+}
 
+/* ===== HEADER (MATCHES HOME) ===== */
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#0D1B2A;
+    padding:15px 0;
+    z-index:1000;
+}
+
+/* ===== TAB BAR ===== */
+nav{
+    width:100%;
+    max-width:700px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    margin:0;
+    padding:0;
+    background:#11263A;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+nav li{
+    flex:1;
+}
+
+nav a{
+    display:block;
+    text-align:center;
+    padding:14px 0;
+    font-family:'Gotham';
+    font-size:16px;
+    color:white;
+    transition:.3s;
+}
+
+nav a:hover{
+    background:#1B3A57;
+}
+
+nav a.active{
+    background:#80A6C1;
+    color:#0D1B2A;
+}
+
+nav li:not(:last-child){
+    border-right:1px solid rgba(255,255,255,0.1);
+}
+
+/* ===== HERO ===== */
 .hero{
-height:50vh;
-background:url(team-bg.jpg) center/cover no-repeat;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-position:relative;
-color:white;
+    height:50vh;
+    background:url(team-bg.jpg) center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    position:relative;
+    color:white;
 }
 
 .hero::after{
-content:'';
-position:absolute;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.6);
+    content:'';
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.6);
 }
 
 .hero-content{
-position:relative;
-z-index:2;
-animation:fadeUp 1.2s ease;
+    position:relative;
+    z-index:2;
 }
 
 .hero h1{
-font-size:52px;
-margin-bottom:10px;
+    font-size:52px;
 }
 
 .hero p{
-font-size:18px;
-opacity:.9;
+    font-size:18px;
+    opacity:.9;
 }
 
 /* ===== HISTORY ===== */
-
 .history{
-max-width:900px;
-margin:auto;
-padding:80px 20px;
-line-height:1.8;
-animation:fadeUp 1.5s ease;
+    max-width:900px;
+    margin:auto;
+    padding:80px 20px;
+    line-height:1.8;
 }
 
 .history h2{
-margin-bottom:20px;
-font-size:36px;
+    font-size:36px;
+    margin-bottom:20px;
 }
 
-/* ===== TEAM SECTION ===== */
-
+/* ===== TEAM ===== */
 .team{
-padding:100px 20px;
-background:#f7f7f7;
-text-align:center;
+    padding:100px 20px;
+    background:#f7f7f7;
+    text-align:center;
 }
 
 .team h2{
-font-size:40px;
-margin-bottom:10px;
+    font-size:40px;
 }
 
 .team-intro{
-max-width:700px;
-margin:0 auto 60px;
-opacity:.8;
+    max-width:700px;
+    margin:0 auto 60px;
+    opacity:.8;
 }
 
-/* ===== TEAM GRID ===== */
-
+/* GRID */
 .team-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:40px;
-max-width:1100px;
-margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:40px;
+    max-width:1100px;
+    margin:auto;
 }
 
-/* ===== TEAM CARDS ===== */
-
+/* CARD */
 .team-card{
-background:white;
-padding:40px 25px;
-border-radius:10px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-transition:all .35s ease;
+    background:white;
+    padding:40px 25px;
+    border-radius:10px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:.3s;
 }
 
 .team-card:hover{
-transform:translateY(-10px);
-box-shadow:0 15px 35px rgba(0,0,0,0.15);
-}
-
-/* TEAM IMAGE */
-
-.team-card img{
-width:110px;
-height:110px;
-border-radius:50%;
-object-fit:cover;
-margin-bottom:20px;
+    transform:translateY(-8px);
 }
 
 /* TEXT */
-
 .team-card h3{
-margin-bottom:6px;
-font-size:22px;
+    font-size:22px;
 }
 
 .role{
-font-size:14px;
-color:#777;
-margin-bottom:18px;
+    font-size:14px;
+    color:#777;
+    margin:10px 0 18px;
 }
 
-/* CONTACT BUTTON */
-
+/* BUTTON */
 .team-card a{
-display:inline-block;
-font-size:14px;
-color:white;
-background:#0D1B2A;
-padding:8px 18px;
-border-radius:4px;
-transition:.3s;
+    display:inline-block;
+    font-size:14px;
+    color:white;
+    background:#0D1B2A;
+    padding:8px 18px;
+    border-radius:4px;
 }
 
 .team-card a:hover{
-background:#80A6C1;
+    background:#80A6C1;
 }
 
-/* ===== ANIMATIONS ===== */
+/* ===== MOBILE ===== */
+@media(max-width:768px){
 
-@keyframes fadeUp{
-0%{
-opacity:0;
-transform:translateY(40px);
-}
+    nav ul{
+        flex-direction:column;
+        border-radius:0;
+    }
 
-100%{
-opacity:1;
-transform:translateY(0);
-}
+    nav a{
+        padding:12px;
+        border-top:1px solid rgba(255,255,255,0.1);
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
 }

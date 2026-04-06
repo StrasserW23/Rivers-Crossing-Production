@@ -1,3 +1,61 @@
+/* ===== HEADER (CENTERED TAB BAR) ===== */
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#0D1B2A;
+    padding:15px 0;
+    z-index:1000;
+}
+
+/* ===== TAB BAR ===== */
+nav{
+    width:100%;
+    max-width:700px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    margin:0;
+    padding:0;
+    background:#11263A;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+nav li{
+    flex:1;
+}
+
+nav a{
+    display:block;
+    text-align:center;
+    padding:14px 0;
+    font-family:'Gotham';
+    font-size:16px;
+    color:white;
+    transition:.3s;
+}
+
+/* Hover */
+nav a:hover{
+    background:#1B3A57;
+}
+
+/* Active tab */
+nav a.active{
+    background:#80A6C1;
+    color:#0D1B2A;
+}
+
+/* Divider */
+nav li:not(:last-child){
+    border-right:1px solid rgba(255,255,255,0.1);
+}
 /* ===== HERO ===== */
 
 .hero{
