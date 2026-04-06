@@ -1,10 +1,10 @@
-/* ===== PAGE SPACING (IMPORTANT) ===== */
+/* ===== PAGE SPACING ===== */
 body{
     margin:0;
-    padding-top:80px; /* prevents nav overlap */
+    padding-top:80px;
 }
 
-/* ===== HEADER (MATCHES HOME) ===== */
+/* ===== HEADER ===== */
 header{
     position:fixed;
     top:0;
@@ -165,10 +165,17 @@ nav li:not(:last-child){
     background:#0D1B2A;
     padding:8px 18px;
     border-radius:4px;
+    transition:.3s;
 }
 
 .team-card a:hover{
     background:#80A6C1;
+}
+
+/* External link indicator */
+.team-card a::after{
+    content:" ↗";
+    font-size:12px;
 }
 
 /* ===== MOBILE ===== */
