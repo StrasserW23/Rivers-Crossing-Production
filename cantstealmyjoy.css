@@ -15,7 +15,7 @@ body{
 }
 
 /* =========================
-   NAVIGATION (ALL SUB PAGES)
+   NAVIGATION
 ========================= */
 header{
     position:fixed;
@@ -65,14 +65,14 @@ nav a.active{
 }
 
 /* =========================
-   PAGE LAYOUT OFFSET
+   PAGE OFFSET
 ========================= */
 main{
     margin-top:90px;
 }
 
 /* =========================
-   HERO SECTION (ALL SUB PAGES)
+   HERO
 ========================= */
 .hero{
     height:45vh;
@@ -128,7 +128,7 @@ main{
 }
 
 /* =========================
-   MAIN FEATURE CARD
+   CARD SYSTEM
 ========================= */
 .series-card{
     display:block;
@@ -162,7 +162,7 @@ main{
 }
 
 /* =========================
-   GRID SYSTEM
+   GRID (TEXT ONLY)
 ========================= */
 .production-grid{
     display:grid;
@@ -172,7 +172,6 @@ main{
     margin:auto;
 }
 
-/* GRID CARDS */
 .production-card{
     display:block;
     background:white;
@@ -202,32 +201,11 @@ main{
 }
 
 /* =========================
-   MEDIA SECTION (IMAGES + VIDEO)
+   📸 SINGLE IMAGE HOLDER
 ========================= */
-.media-section{
-    padding:80px 20px;
-    text-align:center;
-}
-
-.media-section:nth-of-type(even){
-    background:#f7f7f7;
-}
-
-.media-section h2{
-    font-size:34px;
-    margin-bottom:40px;
-}
-
-/* IMAGE GRID */
-.image-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-    max-width:1000px;
-    margin:auto;
-}
-
 .media-image{
+    max-width:900px;
+    margin:0 auto;
     border-radius:12px;
     overflow:hidden;
     box-shadow:0 10px 25px rgba(0,0,0,0.08);
@@ -235,22 +213,19 @@ main{
 
 .media-image img{
     width:100%;
-    height:260px;
+    height:400px;
     object-fit:cover;
     display:block;
-    transition:.3s;
 }
 
-.media-image img:hover{
-    transform:scale(1.05);
-}
-
-/* VIDEO WRAPPER */
+/* =========================
+   🎥 VIDEO HOLDER
+========================= */
 .video-wrapper{
     max-width:900px;
-    margin:auto;
+    margin:0 auto;
     position:relative;
-    padding-bottom:56.25%; /* 16:9 */
+    padding-bottom:56.25%; /* 16:9 ratio */
     height:0;
     border-radius:12px;
     overflow:hidden;
@@ -292,5 +267,9 @@ footer{
 
     .series-card{
         padding:30px 20px;
+    }
+
+    .media-image img{
+        height:250px;
     }
 }
