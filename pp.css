@@ -1,17 +1,28 @@
-/* ===== HEADER (CENTERED TAB BAR) ===== */
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Gotham', sans-serif;
+}
+
+body{
+    background:#fff;
+    color:#111;
+}
+
+/* HEADER */
 header{
     position:fixed;
     top:0;
     width:100%;
     display:flex;
     justify-content:center;
-    align-items:center;
     background:#0D1B2A;
     padding:15px 0;
     z-index:1000;
 }
 
-/* ===== TAB BAR ===== */
 nav{
     width:100%;
     max-width:700px;
@@ -20,8 +31,6 @@ nav{
 nav ul{
     display:flex;
     list-style:none;
-    margin:0;
-    padding:0;
     background:#11263A;
     border-radius:10px;
     overflow:hidden;
@@ -35,163 +44,117 @@ nav a{
     display:block;
     text-align:center;
     padding:14px 0;
-    font-family:'Gotham';
-    font-size:16px;
     color:white;
+    text-decoration:none;
     transition:.3s;
 }
 
-/* Hover */
 nav a:hover{
     background:#1B3A57;
 }
 
-/* Active tab */
 nav a.active{
     background:#80A6C1;
     color:#0D1B2A;
 }
 
-/* Divider */
-nav li:not(:last-child){
-    border-right:1px solid rgba(255,255,255,0.1);
+main{
+    margin-top:90px;
 }
-/* ===== HERO ===== */
 
+/* HERO */
 .hero{
-height:50vh;
-background:url(team-bg.jpg) center/cover no-repeat;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-position:relative;
-color:white;
+    height:50vh;
+    background:url(production-bg.jpg) center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    position:relative;
 }
 
 .hero::after{
-content:'';
-position:absolute;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.6);
+    content:'';
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.6);
 }
 
 .hero-content{
-position:relative;
-z-index:2;
+    position:relative;
+    z-index:2;
 }
 
 .hero h1{
-font-size:52px;
-margin-bottom:10px;
+    font-size:52px;
 }
 
 .hero p{
-font-size:18px;
-opacity:.9;
+    font-size:18px;
 }
 
-
-
-/* ===== CATEGORY SECTION ===== */
-
-.production-category{
-max-width:1200px;
-margin:auto;
-padding:120px 30px;
+/* SECTIONS */
+.upcoming{
+    padding:100px 20px;
+    text-align:center;
+    background:#f7f7f7;
 }
 
-.production-category h2{
-font-family:'Gotham';
-font-size:46px;
-text-align:center;
-margin-bottom:80px;
+.upcoming:nth-of-type(2){
+    background:white;
 }
 
-
-
-/* ===== YEAR SECTION ===== */
-
-.production-year{
-margin-bottom:120px;
+.upcoming h2{
+    font-size:40px;
+    margin-bottom:40px;
 }
 
-
-
-/* FULL IMAGE */
-
-.production-year img{
-width:100%;
-height:500px;
-object-fit:cover;
-border-radius:10px;
+/* GRID */
+.production-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:40px;
+    max-width:1100px;
+    margin:auto;
 }
 
-
-
-/* CONTENT UNDER IMAGE */
-
-.year-content{
-max-width:800px;
-margin:auto;
-padding-top:35px;
-text-align:center;
+/* CARD */
+.production-card{
+    display:block;              /* IMPORTANT for links */
+    background:white;
+    padding:40px 25px;
+    border-radius:10px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    text-decoration:none;
+    color:inherit;
+    transition:.3s;
 }
 
-.year-content h3{
-font-family:'Gotham';
-font-size:32px;
-margin-bottom:18px;
+.production-card:hover{
+    transform:translateY(-8px);
 }
 
-.year-content p{
-font-size:18px;
-line-height:1.7;
-color:#444;
+.production-card h3{
+    font-size:22px;
+    margin-bottom:10px;
 }
 
-
-
-/* ===== HEADER OFFSET ===== */
-
-main{
-margin-top:100px;
+.production-card p{
+    color:#666;
+    line-height:1.6;
 }
 
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:40px;
+    background:#0D1B2A;
+    color:white;
+}
 
-
-/* ===== MOBILE ===== */
-
+/* MOBILE */
 @media(max-width:768px){
-
-.hero h1{
-font-size:40px;
-}
-
-.hero p{
-font-size:18px;
-}
-
-.production-category{
-padding:80px 25px;
-}
-
-.production-category h2{
-font-size:34px;
-margin-bottom:50px;
-}
-
-.production-year img{
-height:300px;
-}
-
-.year-content h3{
-font-size:26px;
-}
-
-.year-content p{
-font-size:16px;
-}
-
+    .hero h1{font-size:36px;}
+    .upcoming h2{font-size:32px;}
 }
