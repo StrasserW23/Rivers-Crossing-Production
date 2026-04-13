@@ -1,81 +1,6 @@
-/* =========================
-   GLOBAL RESET
-========================= */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Gotham', sans-serif;
-}
-
-body{
-    background:#fff;
-    color:#111;
-    line-height:1.6;
-}
-
-/* =========================
-   NAVIGATION
-========================= */
-header{
-    position:fixed;
-    top:0;
-    width:100%;
-    display:flex;
-    justify-content:center;
-    background:#0D1B2A;
-    padding:15px 0;
-    z-index:1000;
-}
-
-nav{
-    width:100%;
-    max-width:750px;
-}
-
-nav ul{
-    display:flex;
-    list-style:none;
-    background:#11263A;
-    border-radius:10px;
-    overflow:hidden;
-}
-
-nav li{
-    flex:1;
-}
-
-nav a{
-    display:block;
-    text-align:center;
-    padding:14px 0;
-    color:white;
-    text-decoration:none;
-    font-size:15px;
-    transition:.3s;
-}
-
-nav a:hover{
-    background:#1B3A57;
-}
-
-nav a.active{
-    background:#80A6C1;
-    color:#0D1B2A;
-}
-
-/* =========================
-   PAGE OFFSET
-========================= */
-main{
-    margin-top:90px;
-}
-
-/* =========================
-   HERO
-========================= */
+/* ===== HERO ===== */
 .hero{
-    height:45vh;
+    height:50vh;
     background:url(production-bg.jpg) center/cover no-repeat;
     display:flex;
     align-items:center;
@@ -88,55 +13,44 @@ main{
 .hero::after{
     content:'';
     position:absolute;
-    inset:0;
+    width:100%;
+    height:100%;
     background:rgba(0,0,0,.6);
 }
 
 .hero-content{
     position:relative;
     z-index:2;
-    padding:0 20px;
 }
 
 .hero h1{
-    font-size:48px;
+    font-size:52px;
 }
 
 .hero p{
     font-size:18px;
     opacity:.9;
-    margin-top:10px;
 }
 
-/* =========================
-   SECTIONS
-========================= */
-.current-series,
-.upcoming{
-    padding:90px 20px;
+/* ===== CURRENT SERIES ===== */
+.current-series{
+    padding:100px 20px;
     text-align:center;
 }
 
-.upcoming{
-    background:#f7f7f7;
-}
-
-.current-series h2,
-.upcoming h2{
-    font-size:36px;
+.current-series h2{
+    font-size:40px;
     margin-bottom:40px;
 }
 
-/* =========================
-   CARD SYSTEM
-========================= */
+/* SERIES CARD (NOW CLICKABLE) */
 .series-card{
     display:block;
-    max-width:750px;
-    margin:0 auto;
+    max-width:600px;
+    margin:auto;
     background:white;
-    padding:45px 30px;
-    border-radius:12px;
+    padding:50px 30px;
+    border-radius:10px;
     box-shadow:0 10px 25px rgba(0,0,0,0.08);
 
     text-decoration:none;
@@ -146,37 +60,47 @@ main{
 }
 
 .series-card:hover{
-    transform:translateY(-6px);
+    transform:translateY(-8px);
     cursor:pointer;
 }
 
 .series-card h3{
-    font-size:26px;
-    margin-bottom:10px;
+    font-size:28px;
 }
 
 .series-desc{
+    margin-top:15px;
     color:#555;
-    font-size:16px;
-    margin-top:12px;
+    line-height:1.6;
 }
 
-/* =========================
-   GRID (TEXT ONLY)
-========================= */
+/* ===== UPCOMING ===== */
+.upcoming{
+    padding:100px 20px;
+    background:#f7f7f7;
+    text-align:center;
+}
+
+.upcoming h2{
+    font-size:40px;
+    margin-bottom:60px;
+}
+
+/* GRID */
 .production-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:30px;
+    gap:40px;
     max-width:1100px;
     margin:auto;
 }
 
+/* CARD (ALSO CLICKABLE NOW) */
 .production-card{
     display:block;
     background:white;
-    padding:35px 25px;
-    border-radius:12px;
+    padding:40px 25px;
+    border-radius:10px;
     box-shadow:0 10px 25px rgba(0,0,0,0.08);
 
     text-decoration:none;
@@ -191,22 +115,31 @@ main{
 }
 
 .production-card h3{
-    font-size:20px;
-    margin-bottom:10px;
+    font-size:22px;
 }
 
 .production-card p{
-    font-size:15px;
+    margin-top:10px;
     color:#666;
+    line-height:1.6;
 }
 
-/* =========================
-   📸 SINGLE IMAGE HOLDER
-========================= */
+/* ===== MEDIA SECTION (MATCHES YOUR SPACING SYSTEM) ===== */
+.media-section{
+    padding:100px 20px;
+    text-align:center;
+}
+
+.media-section h2{
+    font-size:40px;
+    margin-bottom:40px;
+}
+
+/* IMAGE HOLDER (SINGLE) */
 .media-image{
-    max-width:900px;
-    margin:0 auto;
-    border-radius:12px;
+    max-width:600px;
+    margin:auto;
+    border-radius:10px;
     overflow:hidden;
     box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
@@ -218,16 +151,14 @@ main{
     display:block;
 }
 
-/* =========================
-   🎥 VIDEO HOLDER
-========================= */
+/* VIDEO HOLDER */
 .video-wrapper{
-    max-width:900px;
-    margin:0 auto;
+    max-width:600px;
+    margin:auto;
     position:relative;
-    padding-bottom:56.25%; /* 16:9 ratio */
+    padding-bottom:56.25%; /* 16:9 */
     height:0;
-    border-radius:12px;
+    border-radius:10px;
     overflow:hidden;
     box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
@@ -240,36 +171,15 @@ main{
     height:100%;
 }
 
-/* =========================
-   FOOTER
-========================= */
-footer{
-    text-align:center;
-    padding:40px 20px;
-    background:#0D1B2A;
-    color:white;
-    margin-top:60px;
-}
-
-/* =========================
-   MOBILE
-========================= */
+/* ===== MOBILE ===== */
 @media(max-width:768px){
 
     .hero h1{
-        font-size:34px;
-    }
-
-    .current-series h2,
-    .upcoming h2{
-        font-size:28px;
-    }
-
-    .series-card{
-        padding:30px 20px;
+        font-size:36px;
     }
 
     .media-image img{
-        height:250px;
+        height:260px;
     }
+
 }

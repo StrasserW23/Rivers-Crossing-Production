@@ -1,4 +1,6 @@
-/* RESET */
+/* =========================
+   RESET
+========================= */
 *{
     margin:0;
     padding:0;
@@ -6,12 +8,17 @@
     font-family:'Gotham', sans-serif;
 }
 
+/* =========================
+   BODY
+========================= */
 body{
     background:#fff;
     color:#111;
 }
 
-/* HEADER */
+/* =========================
+   NAV
+========================= */
 header{
     position:fixed;
     top:0;
@@ -58,11 +65,16 @@ nav a.active{
     color:#0D1B2A;
 }
 
+/* =========================
+   MAIN OFFSET
+========================= */
 main{
     margin-top:90px;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 .hero{
     height:50vh;
     background:url(production-bg.jpg) center/cover no-repeat;
@@ -92,9 +104,12 @@ main{
 
 .hero p{
     font-size:18px;
+    opacity:.9;
 }
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
 .upcoming{
     padding:100px 20px;
     text-align:center;
@@ -102,7 +117,7 @@ main{
 }
 
 .upcoming:nth-of-type(2){
-    background:white;
+    background:#fff;
 }
 
 .upcoming h2{
@@ -110,7 +125,9 @@ main{
     margin-bottom:40px;
 }
 
-/* GRID */
+/* =========================
+   GRID
+========================= */
 .production-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -119,20 +136,25 @@ main{
     margin:auto;
 }
 
-/* CARD */
+/* =========================
+   CLICKABLE CARDS
+========================= */
 .production-card{
-    display:block;              /* IMPORTANT for links */
+    display:block;
     background:white;
     padding:40px 25px;
     border-radius:10px;
     box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
     text-decoration:none;
     color:inherit;
+
     transition:.3s;
 }
 
 .production-card:hover{
     transform:translateY(-8px);
+    cursor:pointer;
 }
 
 .production-card h3{
@@ -145,7 +167,9 @@ main{
     line-height:1.6;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 footer{
     text-align:center;
     padding:40px;
@@ -153,8 +177,16 @@ footer{
     color:white;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 @media(max-width:768px){
-    .hero h1{font-size:36px;}
-    .upcoming h2{font-size:32px;}
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .upcoming h2{
+        font-size:32px;
+    }
 }
