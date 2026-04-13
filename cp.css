@@ -43,13 +43,25 @@
     margin-bottom:40px;
 }
 
+/* SERIES CARD (NOW CLICKABLE) */
 .series-card{
+    display:block;
     max-width:600px;
     margin:auto;
     background:white;
     padding:50px 30px;
     border-radius:10px;
     box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+    text-decoration:none;
+    color:inherit;
+
+    transition:.3s;
+}
+
+.series-card:hover{
+    transform:translateY(-8px);
+    cursor:pointer;
 }
 
 .series-card h3{
@@ -83,17 +95,23 @@
     margin:auto;
 }
 
-/* CARD */
+/* CARD (ALSO CLICKABLE NOW) */
 .production-card{
+    display:block;
     background:white;
     padding:40px 25px;
     border-radius:10px;
     box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+    text-decoration:none;
+    color:inherit;
+
     transition:.3s;
 }
 
 .production-card:hover{
     transform:translateY(-8px);
+    cursor:pointer;
 }
 
 .production-card h3{
