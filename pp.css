@@ -1,192 +1,129 @@
-/* =========================
-   RESET
-========================= */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Gotham', sans-serif;
+/* =========================================
+   PP.CSS - PAST PRODUCTIONS SPECIFIC STYLES
+   ========================================= */
+
+/* ===== HERO ===== */
+.hero {
+    height: 50vh;
+    background: url(production-bg.jpg) center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    color: white;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 52px;
+}
+
+.hero p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* ===== SECTIONS ===== */
+.upcoming {
+    padding: 100px 20px;
+    text-align: center;
+    background: #f7f7f7;
+}
+
+/* Alternate section colors for visual interest */
+.upcoming:nth-of-type(even) {
+    background: #fff;
+}
+
+.upcoming h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+/* ===== GRID ===== */
+.production-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* ===== CLICKABLE CARDS (STYLE & INTERACTION) ===== */
+.production-card {
+    display: block; /* Makes the entire anchor tag a block-level card */
+    background: white;
+    padding: 40px 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+    text-decoration: none; /* Removes link underline */
+    color: inherit; /* Prevents default blue link color */
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+/* Hover Effect: Card rises and shadow intensifies */
+.production-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    cursor: pointer;
+}
+
+.production-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #111; /* Ensures title stands out */
+}
+
+.production-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #0D1B2A;
+    color: white;
+    margin-top: auto; /* Pushes to bottom if main content is short */
 }
 
 /* =========================
-   BODY
+   MOBILE RESPONSIVENESS
 ========================= */
-body{
-    background:#fff;
-    color:#111;
-}
-
-/* =========================
-   NAV
-========================= */
-header{
-    position:fixed;
-    top:0;
-    width:100%;
-    display:flex;
-    justify-content:center;
-    background:#0D1B2A;
-    padding:15px 0;
-    z-index:1000;
-}
-
-nav{
-    width:100%;
-    max-width:700px;
-}
-
-nav ul{
-    display:flex;
-    list-style:none;
-    background:#11263A;
-    border-radius:10px;
-    overflow:hidden;
-}
-
-nav li{
-    flex:1;
-}
-
-nav a{
-    display:block;
-    text-align:center;
-    padding:14px 0;
-    color:white;
-    text-decoration:none;
-    transition:.3s;
-}
-
-nav a:hover{
-    background:#1B3A57;
-}
-
-nav a.active{
-    background:#80A6C1;
-    color:#0D1B2A;
-}
-
-/* =========================
-   MAIN OFFSET
-========================= */
-main{
-    margin-top:90px;
-}
-
-/* =========================
-   HERO
-========================= */
-.hero{
-    height:50vh;
-    background:url(production-bg.jpg) center/cover no-repeat;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:white;
-    position:relative;
-}
-
-.hero::after{
-    content:'';
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,.6);
-}
-
-.hero-content{
-    position:relative;
-    z-index:2;
-}
-
-.hero h1{
-    font-size:52px;
-}
-
-.hero p{
-    font-size:18px;
-    opacity:.9;
-}
-
-/* =========================
-   SECTIONS
-========================= */
-.upcoming{
-    padding:100px 20px;
-    text-align:center;
-    background:#f7f7f7;
-}
-
-.upcoming:nth-of-type(2){
-    background:#fff;
-}
-
-.upcoming h2{
-    font-size:40px;
-    margin-bottom:40px;
-}
-
-/* =========================
-   GRID
-========================= */
-.production-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:40px;
-    max-width:1100px;
-    margin:auto;
-}
-
-/* =========================
-   CLICKABLE CARDS
-========================= */
-.production-card{
-    display:block;
-    background:white;
-    padding:40px 25px;
-    border-radius:10px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.08);
-
-    text-decoration:none;
-    color:inherit;
-
-    transition:.3s;
-}
-
-.production-card:hover{
-    transform:translateY(-8px);
-    cursor:pointer;
-}
-
-.production-card h3{
-    font-size:22px;
-    margin-bottom:10px;
-}
-
-.production-card p{
-    color:#666;
-    line-height:1.6;
-}
-
-/* =========================
-   FOOTER
-========================= */
-footer{
-    text-align:center;
-    padding:40px;
-    background:#0D1B2A;
-    color:white;
-}
-
-/* =========================
-   MOBILE
-========================= */
-@media(max-width:768px){
-
-    .hero h1{
-        font-size:36px;
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
     }
 
-    .upcoming h2{
-        font-size:32px;
+    .hero p {
+        font-size: 16px;
+    }
+
+    .upcoming {
+        padding: 60px 15px;
+    }
+
+    .upcoming h2 {
+        font-size: 32px;
+    }
+
+    .production-card h3 {
+        font-size: 20px;
     }
 }
