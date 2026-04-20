@@ -171,6 +171,22 @@
     height:100%;
 }
 
+/* IMAGE HOLDER (SINGLE) */
+.media-image{
+    max-width:1600px;
+    margin:auto;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.media-image img{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+    display:block;
+}
+
 /* ===== MOBILE ===== */
 @media(max-width:768px){
 
